@@ -7,7 +7,7 @@
 //
 
 #import "WWSegmentView.h"
-#import <Masonry.h>
+#import <Masonry/Masonry.h>
 #import "UIView+WWExtend.h"
 #import "WWSegmentViewCell.h"
 #import "WWColorFontDefines.h"
