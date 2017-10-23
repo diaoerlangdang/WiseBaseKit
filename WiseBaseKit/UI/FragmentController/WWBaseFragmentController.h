@@ -8,7 +8,7 @@
 
 #import "WWBaseViewController.h"
 #import "UIViewController+WWFragment.h"
-#import <Masonry.h>
+#import <Masonry/Masonry.h>
 
 @protocol WWFragmentControllerDelegate <NSObject>
 

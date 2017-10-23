@@ -9,7 +9,8 @@ s.source = { :git => 'https://github.com/diaoerlangdang/WiseBaseKit.git', :tag =
 s.requires_arc = true
 s.ios.deployment_target = '8.0'
 s.source_files = 'WiseBaseKit/**/*'
-spec.framework = 'UIKit'
-spec.dependency 'MJRefresh'
-spec.dependency 'Masonry'
+s.resource = 'WiseBaseKit/resource/WiseKitResource.bundle'
+s.framework = 'Foundation', 'UIKit'
+s.dependency 'MJRefresh'
+s.dependency 'Masonry'
 end

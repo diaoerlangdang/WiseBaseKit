@@ -7,7 +7,7 @@
 //
 
 #import "WWBaseGuidViewController.h"
-#import <Masonry.h>
+#import <Masonry/Masonry.h>
 #import "WWDeviceDefines.h"
 #import "UIView+WWExtend.h"
 

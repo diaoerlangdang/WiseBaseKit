@@ -7,7 +7,7 @@
 //
 
 #import "WWSegmentViewCell.h"
-#import <Masonry.h>
+#import <Masonry/Masonry.h>
 #import "WWColorFontDefines.h"
 
 @interface WWSegmentViewCell()

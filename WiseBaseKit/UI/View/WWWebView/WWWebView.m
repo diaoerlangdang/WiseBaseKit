@@ -7,7 +7,7 @@
 //
 
 #import "WWWebView.h"
-#import <Masonry.h>
+#import <Masonry/Masonry.h>
 
 static CGFloat const kProgressViewHeight = 2.0f;
 

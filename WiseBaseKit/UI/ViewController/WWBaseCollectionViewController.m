@@ -7,8 +7,8 @@
 //
 
 #import "WWBaseCollectionViewController.h"
-#import <Masonry.h>
-#import <MJRefresh.h>
+#import <Masonry/Masonry.h>
+#import <MJRefresh/MJRefresh.h>
 
 @interface WWBaseCollectionViewController ()
 
