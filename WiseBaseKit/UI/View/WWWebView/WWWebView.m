@@ -97,9 +97,12 @@ static CGFloat const kProgressViewHeight = 2.0f;
 /** 监听进度条 */
 - (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void*)context
 {
-    if([keyPath isEqualToString:@"estimatedProgress"]){
+    if([keyPath isEqualToString:@"w"]){
         _progressBar.hidden = _wkWebView.estimatedProgress == 1;
         [_progressBar setProgress:_wkWebView.estimatedProgress animated:YES];
+        if (_progressBar.hidden) {
+            _progressBar.progress = 0;
+        }
     }
 }
 

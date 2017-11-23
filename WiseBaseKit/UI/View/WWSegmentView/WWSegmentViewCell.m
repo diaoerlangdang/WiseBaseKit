@@ -47,7 +47,7 @@
     [_iconBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self.contentView);
     }];
-    
+    
     [_iconBtn setTitleEdgeOffsets:UIEdgeOffsetsMake(5, 0, -10, 0)];
     
     _iconBtn.userInteractionEnabled = false;

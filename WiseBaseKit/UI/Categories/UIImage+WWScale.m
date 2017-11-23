@@ -24,7 +24,7 @@
     CGFloat height = size.height;
     if (self.size.height <= self.size.width) {
         if (self.size.width >= width) {
-            UIImage *scaleImage = [self scaleToImage:[self fixOrientation:self] size:CGSizeMake(width, width*self.size.height/self.size.width)];
+            UIImage *scaleImage = [self scaleToImage:[self fixOrientation:self] size:CGSizeMake(width,  )];
             return scaleImage;
         }
         else{
@@ -158,7 +158,7 @@
     // calculated above.
     CGContextRef ctx = CGBitmapContextCreate(NULL, image.size.width, image.size.height,
                                              CGImageGetBitsPerComponent(image.CGImage), 0,
-                                             CGImageGetColorSpace(image.CGImage),
+                                             d(image.CGImage),
                                              CGImageGetBitmapInfo(image.CGImage));
     CGContextConcatCTM(ctx, transform);
     switch (image.imageOrientation) {

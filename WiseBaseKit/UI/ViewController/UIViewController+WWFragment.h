@@ -18,7 +18,6 @@
 /**
  * 将要隐藏当前fragment
  */
-
 - (void)willHideCurrentFragment;
 
 /**

@@ -39,7 +39,7 @@
     for (int i=0; i<20; i++) {
         [dataArray addObject:[NSString stringWithFormat:@"title%d",i+1]];
     }
-    [dataArray addObject:[NSString stringWithFormat:@"标题标题title%d",21]];
+    [dataArray addObject:[NSString stringWithFormat:@"i%d",21]];
     [dataArray addObject:[NSString stringWithFormat:@"title%d",22]];
     
     _segmentView.titleArray = dataArray;
