@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		87F59FF581E0ACB39BC1FA8C /* libPods-TestWiseBaseKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A565598ADB83F24E2C35980 /* libPods-TestWiseBaseKit.a */; };
+		E91473B61FDA912200E6BFE9 /* WWSegmentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E91473B41FDA912200E6BFE9 /* WWSegmentViewCell.m */; };
+		E91473B71FDA912200E6BFE9 /* WWSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E91473B51FDA912200E6BFE9 /* WWSegmentView.m */; };
 		E9215B271F99BF9A0071B59F /* WiseKitResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9215B261F99BF9A0071B59F /* WiseKitResource.bundle */; };
 		E92E72921F9D8C9700345A8D /* ConfigInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E72821F9D8C9700345A8D /* ConfigInfo.m */; };
 		E92E72931F9D8C9700345A8D /* GuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E72861F9D8C9700345A8D /* GuidViewController.m */; };
@@ -17,6 +19,10 @@
 		E92E72B11F9D96CF00345A8D /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E72B01F9D96CF00345A8D /* MainPageViewController.m */; };
 		E92E72BC1F9D994800345A8D /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E72B91F9D994800345A8D /* WebViewController.m */; };
 		E92E72C31F9D9A0400345A8D /* NoDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E72C21F9D9A0400345A8D /* NoDataViewController.m */; };
+		E9355FC91FD4F7E700EC7278 /* WWTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9355FC81FD4F7E700EC7278 /* WWTableView.m */; };
+		E9355FCF1FD5279400EC7278 /* WWBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9355FCE1FD5279400EC7278 /* WWBaseWebViewController.m */; };
+		E935607C1FD6316A00EC7278 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E935607B1FD6315B00EC7278 /* AudioToolbox.framework */; };
+		E935609A1FD8CE5400EC7278 /* UINavigationBar+WWBackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E93560991FD8CE5400EC7278 /* UINavigationBar+WWBackgroundColor.m */; };
 		E94076331F5652B700D38910 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E94076321F5652B700D38910 /* main.m */; };
 		E94076361F5652B700D38910 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E94076351F5652B700D38910 /* AppDelegate.m */; };
 		E940763C1F5652B700D38910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E940763A1F5652B700D38910 /* Main.storyboard */; };
@@ -37,7 +43,6 @@
 		E946CD481F6A707B00F0452B /* UIViewController+WWFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = E946CD471F6A707B00F0452B /* UIViewController+WWFragment.m */; };
 		E946CD4B1F6A715D00F0452B /* WWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E946CD4A1F6A715D00F0452B /* WWBaseViewController.m */; };
 		E946CD6B1F6BDBA700F0452B /* WWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E946CD6A1F6BDBA700F0452B /* WWNavigationController.m */; };
-		E9554D301F7B4A4300C75852 /* WWSegmentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9554D2F1F7B4A4300C75852 /* WWSegmentViewCell.m */; };
 		E95A9B241F9DB86200BDCDCD /* WWBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95A9B231F9DB86200BDCDCD /* WWBaseCollectionViewController.m */; };
 		E95A9B2C1F9DC38200BDCDCD /* UICollectionViewLeftAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E95A9B2B1F9DC38100BDCDCD /* UICollectionViewLeftAlignedLayout.m */; };
 		E95A9B331F9DC3CF00BDCDCD /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95A9B321F9DC3CF00BDCDCD /* CollectionViewController.m */; };
@@ -54,12 +59,15 @@
 		E96239291F9DD61D0042ED5E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E95BD47F1F73BB6200E6BC5A /* 1.png */; };
 		E962392A1F9DD61D0042ED5E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = E95BD4801F73BB6200E6BC5A /* 2.png */; };
 		E9B932421F7E410600897B0D /* WWWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B932411F7E410600897B0D /* WWWebView.m */; };
-		E9CE63901F79EDAB00C1C612 /* WWSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CE638F1F79EDAB00C1C612 /* WWSegmentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E31180AB1770FF74A547984 /* Pods-TestWiseBaseKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestWiseBaseKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestWiseBaseKit/Pods-TestWiseBaseKit.debug.xcconfig"; sourceTree = "<group>"; };
 		4A565598ADB83F24E2C35980 /* libPods-TestWiseBaseKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestWiseBaseKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91473B21FDA912200E6BFE9 /* WWSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWSegmentView.h; sourceTree = "<group>"; };
+		E91473B31FDA912200E6BFE9 /* WWSegmentViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWSegmentViewCell.h; sourceTree = "<group>"; };
+		E91473B41FDA912200E6BFE9 /* WWSegmentViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWSegmentViewCell.m; sourceTree = "<group>"; };
+		E91473B51FDA912200E6BFE9 /* WWSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWSegmentView.m; sourceTree = "<group>"; };
 		E9215B261F99BF9A0071B59F /* WiseKitResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WiseKitResource.bundle; sourceTree = "<group>"; };
 		E92E72811F9D8C9700345A8D /* ConfigInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigInfo.h; sourceTree = "<group>"; };
 		E92E72821F9D8C9700345A8D /* ConfigInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigInfo.m; sourceTree = "<group>"; };
@@ -77,6 +85,13 @@
 		E92E72B91F9D994800345A8D /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		E92E72C11F9D9A0400345A8D /* NoDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoDataViewController.h; sourceTree = "<group>"; };
 		E92E72C21F9D9A0400345A8D /* NoDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoDataViewController.m; sourceTree = "<group>"; };
+		E9355FC71FD4F7E700EC7278 /* WWTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWTableView.h; sourceTree = "<group>"; };
+		E9355FC81FD4F7E700EC7278 /* WWTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWTableView.m; sourceTree = "<group>"; };
+		E9355FCD1FD5279400EC7278 /* WWBaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWBaseWebViewController.h; sourceTree = "<group>"; };
+		E9355FCE1FD5279400EC7278 /* WWBaseWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWBaseWebViewController.m; sourceTree = "<group>"; };
+		E935607B1FD6315B00EC7278 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E93560981FD8CE5400EC7278 /* UINavigationBar+WWBackgroundColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+WWBackgroundColor.h"; sourceTree = "<group>"; };
+		E93560991FD8CE5400EC7278 /* UINavigationBar+WWBackgroundColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+WWBackgroundColor.m"; sourceTree = "<group>"; };
 		E940762E1F5652B700D38910 /* TestWiseBaseKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestWiseBaseKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94076321F5652B700D38910 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E94076341F5652B700D38910 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,8 +134,6 @@
 		E946CD4E1F6A756500F0452B /* WWColorFontDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWColorFontDefines.h; sourceTree = "<group>"; };
 		E946CD691F6BDBA700F0452B /* WWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWNavigationController.h; sourceTree = "<group>"; };
 		E946CD6A1F6BDBA700F0452B /* WWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWNavigationController.m; sourceTree = "<group>"; };
-		E9554D2E1F7B4A4300C75852 /* WWSegmentViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWSegmentViewCell.h; sourceTree = "<group>"; };
-		E9554D2F1F7B4A4300C75852 /* WWSegmentViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWSegmentViewCell.m; sourceTree = "<group>"; };
 		E9554D391F7CCC6700C75852 /* up@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "up@3x.png"; sourceTree = "<group>"; };
 		E9554D3A1F7CCC6700C75852 /* down@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down@3x.png"; sourceTree = "<group>"; };
 		E95A9B221F9DB86200BDCDCD /* WWBaseCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWBaseCollectionViewController.h; sourceTree = "<group>"; };
@@ -151,8 +164,6 @@
 		E95BD4A21F78CC4200E6BC5A /* WWBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWBaseTableViewController.m; sourceTree = "<group>"; };
 		E9B932401F7E410600897B0D /* WWWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWWebView.h; sourceTree = "<group>"; };
 		E9B932411F7E410600897B0D /* WWWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWWebView.m; sourceTree = "<group>"; };
-		E9CE638E1F79EDAB00C1C612 /* WWSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWSegmentView.h; sourceTree = "<group>"; };
-		E9CE638F1F79EDAB00C1C612 /* WWSegmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWSegmentView.m; sourceTree = "<group>"; };
 		F431A0D52978F9175A809E94 /* Pods-TestWiseBaseKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestWiseBaseKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestWiseBaseKit/Pods-TestWiseBaseKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E935607C1FD6316A00EC7278 /* AudioToolbox.framework in Frameworks */,
 				87F59FF581E0ACB39BC1FA8C /* libPods-TestWiseBaseKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +192,7 @@
 		6B2239685C1BEEDB550178D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E935607B1FD6315B00EC7278 /* AudioToolbox.framework */,
 				4A565598ADB83F24E2C35980 /* libPods-TestWiseBaseKit.a */,
 			);
 			name = Frameworks;
@@ -398,6 +411,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E9355FC61FD4F7D500EC7278 /* WWTableView */ = {
+			isa = PBXGroup;
+			children = (
+				E9355FC71FD4F7E700EC7278 /* WWTableView.h */,
+				E9355FC81FD4F7E700EC7278 /* WWTableView.m */,
+			);
+			path = WWTableView;
+			sourceTree = "<group>";
+		};
 		E94076251F5652B700D38910 = {
 			isa = PBXGroup;
 			children = (
@@ -511,6 +533,8 @@
 				E94076D81F56C3CF00D38910 /* UIImage+WWVideo.m */,
 				E94076D91F56C3CF00D38910 /* UIView+WWExtend.h */,
 				E94076DA1F56C3CF00D38910 /* UIView+WWExtend.m */,
+				E93560981FD8CE5400EC7278 /* UINavigationBar+WWBackgroundColor.h */,
+				E93560991FD8CE5400EC7278 /* UINavigationBar+WWBackgroundColor.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -554,6 +578,8 @@
 				E95BD4A21F78CC4200E6BC5A /* WWBaseTableViewController.m */,
 				E95A9B221F9DB86200BDCDCD /* WWBaseCollectionViewController.h */,
 				E95A9B231F9DB86200BDCDCD /* WWBaseCollectionViewController.m */,
+				E9355FCD1FD5279400EC7278 /* WWBaseWebViewController.h */,
+				E9355FCE1FD5279400EC7278 /* WWBaseWebViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -676,6 +702,7 @@
 		E95BD49C1F78AB5A00E6BC5A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E9355FC61FD4F7D500EC7278 /* WWTableView */,
 				E9B9323F1F7E40A400897B0D /* WWWebView */,
 				E960F4B51F79ED0700D9B612 /* WWSegmentView */,
 			);
@@ -685,10 +712,10 @@
 		E960F4B51F79ED0700D9B612 /* WWSegmentView */ = {
 			isa = PBXGroup;
 			children = (
-				E9CE638E1F79EDAB00C1C612 /* WWSegmentView.h */,
-				E9CE638F1F79EDAB00C1C612 /* WWSegmentView.m */,
-				E9554D2E1F7B4A4300C75852 /* WWSegmentViewCell.h */,
-				E9554D2F1F7B4A4300C75852 /* WWSegmentViewCell.m */,
+				E91473B21FDA912200E6BFE9 /* WWSegmentView.h */,
+				E91473B51FDA912200E6BFE9 /* WWSegmentView.m */,
+				E91473B31FDA912200E6BFE9 /* WWSegmentViewCell.h */,
+				E91473B41FDA912200E6BFE9 /* WWSegmentViewCell.m */,
 			);
 			path = WWSegmentView;
 			sourceTree = "<group>";
@@ -841,16 +868,16 @@
 				E95BD49B1F78A7C300E6BC5A /* WWBaseKitConfig.m in Sources */,
 				E95BD4A31F78CC4200E6BC5A /* WWBaseTableViewController.m in Sources */,
 				E94076F21F56C3CF00D38910 /* WWJSONUtils.m in Sources */,
+				E91473B61FDA912200E6BFE9 /* WWSegmentViewCell.m in Sources */,
+				E9355FC91FD4F7E700EC7278 /* WWTableView.m in Sources */,
 				E95BD4941F78950F00E6BC5A /* WWConfigInfo.m in Sources */,
 				E946CD481F6A707B00F0452B /* UIViewController+WWFragment.m in Sources */,
-				E9554D301F7B4A4300C75852 /* WWSegmentViewCell.m in Sources */,
 				E94076EF1F56C3CF00D38910 /* UIImage+WWVideo.m in Sources */,
 				E95A9B331F9DC3CF00BDCDCD /* CollectionViewController.m in Sources */,
 				E94076F41F56C3CF00D38910 /* WWUtils.m in Sources */,
 				E94076F01F56C3CF00D38910 /* UIView+WWExtend.m in Sources */,
 				E92E72B11F9D96CF00345A8D /* MainPageViewController.m in Sources */,
 				E95A9B2C1F9DC38200BDCDCD /* UICollectionViewLeftAlignedLayout.m in Sources */,
-				E9CE63901F79EDAB00C1C612 /* WWSegmentView.m in Sources */,
 				E94076EC1F56C3CF00D38910 /* UIColor+WWImage.m in Sources */,
 				E946CD6B1F6BDBA700F0452B /* WWNavigationController.m in Sources */,
 				E94076361F5652B700D38910 /* AppDelegate.m in Sources */,
@@ -858,13 +885,16 @@
 				E92E72C31F9D9A0400345A8D /* NoDataViewController.m in Sources */,
 				E94076F11F56C3CF00D38910 /* WWCryptoUtils.m in Sources */,
 				E92E72921F9D8C9700345A8D /* ConfigInfo.m in Sources */,
+				E935609A1FD8CE5400EC7278 /* UINavigationBar+WWBackgroundColor.m in Sources */,
 				E946CD441F6A6DA000F0452B /* UIImage+WWStretch.m in Sources */,
 				E946CD4B1F6A715D00F0452B /* WWBaseViewController.m in Sources */,
 				E95BD4791F73A17D00E6BC5A /* WWTabBarController.m in Sources */,
+				E91473B71FDA912200E6BFE9 /* WWSegmentView.m in Sources */,
 				E9B932421F7E410600897B0D /* WWWebView.m in Sources */,
 				E92E72AC1F9D969D00345A8D /* TableViewController.m in Sources */,
 				E92E72AE1F9D969D00345A8D /* FragmentController.m in Sources */,
 				E94076F31F56C3CF00D38910 /* WWRegexUtils.m in Sources */,
+				E9355FCF1FD5279400EC7278 /* WWBaseWebViewController.m in Sources */,
 				E94076EE1F56C3CF00D38910 /* UIImage+WWScale.m in Sources */,
 				E95BD47D1F73B7E200E6BC5A /* WWBaseGuidViewController.m in Sources */,
 				E95A9B361F9DC90600BDCDCD /* CollectionViewCell.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "FragmentController.h"
 #import "Fragment.h"
+#import "TableViewController.h"
 
 @interface FragmentController ()<WWSegmentViewDelegate, WWFragmentControllerDelegate>
 
@@ -29,17 +30,18 @@
     [_segmentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view.mas_left);
         make.right.equalTo(self.view.mas_right);
-        make.top.equalTo(self.view.mas_top).offset(0);
+        make.top.equalTo(self.view.mas_top).offset(WW_NAVIGATION_BAR_HEIGHT);
         make.height.equalTo(@45.f);
     }];
     _segmentView.delegate = self;
     _segmentView.selectTitleFont = [UIFont systemFontOfSize:20];
+    _segmentView.titleIcon = [UIImage imageNamed:@"up"];
     
     NSMutableArray<NSString *> *dataArray = [NSMutableArray array];
     for (int i=0; i<20; i++) {
         [dataArray addObject:[NSString stringWithFormat:@"title%d",i+1]];
     }
-    [dataArray addObject:[NSString stringWithFormat:@"i%d",21]];
+    [dataArray addObject:[NSString stringWithFormat:@"标题标题title%d",21]];
     [dataArray addObject:[NSString stringWithFormat:@"title%d",22]];
     
     _segmentView.titleArray = dataArray;
@@ -58,9 +60,16 @@
     }];
     
     for (int i=0; i<dataArray.count; i++) {
-        Fragment *fragment = [[Fragment alloc] init];
-        fragment.tips = dataArray[i];
-        [self addFragment:fragment];
+        if (i==0) {
+            TableViewController *vc = [[TableViewController alloc] init];
+            [self addFragment:vc];
+        }
+        else {
+            Fragment *fragment = [[Fragment alloc] init];
+            fragment.tips = dataArray[i];
+            [self addFragment:fragment];
+        }
+        
     }
 }
 

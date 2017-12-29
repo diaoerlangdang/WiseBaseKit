@@ -24,11 +24,14 @@
     self.title = @"TabViewController";
     
     _dataArray = [NSMutableArray array];
-    [_dataArray addObject:@"单行数据"];
-    [_dataArray addObject:@"多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据多行数据"];
-    
-    //自动计算cell高度
-    self.tableView.estimatedRowHeight = 100;
+    for (int i=0; i<20; i++) {
+        if (i%2 == 0) {
+            [_dataArray addObject:@"点击可切换是否上滑隐藏导航栏；"];
+        }
+        else {
+            [_dataArray addObject:@"点击可切换是否上滑隐藏导航栏；点击可切换是否上滑隐藏导航栏；点击可切换是否上滑隐藏导航栏；点击可切换是否上滑隐藏导航栏；点击可切换是否上滑隐藏导航栏；点击可切换是否上滑隐藏导航栏；点击可切换是否上滑隐藏导航栏；点击可切换是否上滑隐藏导航栏；点击可切换是否上滑隐藏导航栏；点击可切换是否上滑隐藏导航栏；点击可切换是否上滑隐藏导航栏；点击可切换是否上滑隐藏导航栏；点击可切换是否上滑隐藏导航栏；"];
+        }
+    }
     
     //显示上拉加载
     self.showRefreshFooter = true;
@@ -66,6 +69,11 @@
     cell.textLabel.text = _dataArray[indexPath.row];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.isScrollUpHideNavBar = !self.isScrollUpHideNavBar;
 }
 
 

@@ -26,8 +26,6 @@
     
     self.title = @"首页";
     
-    self.returnImageName = nil;
-    
     _dataArray = [NSMutableArray array];
     [_dataArray addObject:@"WebViewController"];
     [_dataArray addObject:@"FragmentController-横向"];
@@ -37,6 +35,16 @@
     
     //自动计算cell高度
     self.tableView.estimatedRowHeight = 100;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -67,7 +75,7 @@
         //网页
         case 0:
             vc = [[WebViewController alloc] init];
-            ((WebViewController*) vc).url = @"http://www.baidu.com";
+            ((WebViewController*) vc).urlString = @"https://www.jianshu.com";
             break;
             
         //FragmentController-横向

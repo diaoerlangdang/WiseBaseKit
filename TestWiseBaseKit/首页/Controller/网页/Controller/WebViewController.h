@@ -6,11 +6,9 @@
 //  Copyright © 2017年 wuruizhi. All rights reserved.
 //
 
-#import "WWBaseViewController.h"
+#import "WWBaseWebViewController.h"
 #import "WiseBaseKit.h"
 
-@interface WebViewController : WWBaseViewController
-
-@property(nonatomic, strong) NSString *url;
+@interface WebViewController : WWBaseWebViewController
 
 @end
