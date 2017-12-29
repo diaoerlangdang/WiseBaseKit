@@ -12,9 +12,6 @@
 #import "MainPageViewController.h"
 #import "NoDataViewController.h"
 
-//使用debug版本
-#define WW_DEBUG    1
-
 @interface AppDelegate ()
 
 @end
@@ -28,9 +25,20 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
+    //设置默认颜色
+    WWBaseTableViewController.defaultTableViewBgColor = WW_COLOR_HexRGB(0xeeeeee);
+    
     [WWBaseKitConfig shareInstance].debug = true;
     
     [ConfigInfo shareInstance].isLogIn = true;
+    
+    [CSToastManager setDefaultPosition: CSToastPositionCenter];
+    
+    [[UINavigationBar appearance] ww_setBackgroundColor:WW_COLOR_HexRGB(0xee0000)];
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+    NSDictionary *attr = @{NSFontAttributeName:[UIFont systemFontOfSize:18], NSForegroundColorAttributeName:[UIColor whiteColor]};
+    [[UINavigationBar appearance] setTitleTextAttributes:attr];
+    [[UINavigationBar appearance] setShadowImage:[UIImage new]];
     
     if ([[ConfigInfo shareInstance] isUpdateVersion]) {
         

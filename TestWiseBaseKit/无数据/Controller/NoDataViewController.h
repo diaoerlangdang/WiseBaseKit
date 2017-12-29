@@ -6,8 +6,8 @@
 //  Copyright © 2017年 wuruizhi. All rights reserved.
 //
 
-#import "WWBaseViewController.h"
+#import "WWBaseTableViewController.h"
 
-@interface NoDataViewController : WWBaseViewController
+@interface NoDataViewController : WWBaseTableViewController
 
 @end

@@ -1,7 +1,7 @@
 target 'TestWiseBaseKit' do
-    pod 'MJRefresh'
-    pod 'Masonry'
-    pod 'MBProgressHUD'
-    pod 'Toast'
+    pod 'MJRefresh','~> 3.1'
+    pod 'Masonry','~> 1.1'
+    pod 'MBProgressHUD','~> 1.0'
+    pod 'Toast','~> 3.1'
     
 end

@@ -10,7 +10,7 @@
 
 @interface Fragment ()
 
-@property (nonatomic, strong) UILabel *tipLabel;
+@property (nonatomic, strong) UILabel *tipsLabel;
 
 @end
 
@@ -20,11 +20,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _tipLabel = [UILabel new];
-    _tipLabel.textColor = [UIColor whiteColor];
-    _tipLabel.text = _tips;
-    [self.view addSubview:_tipLabel];
-    [_tipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    _tipsLabel = [UILabel new];
+    _tipsLabel.textColor = [UIColor whiteColor];
+    _tipsLabel.text = _tips;
+    [self.view addSubview:_tipsLabel];
+    [_tipsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self.view);
     }];
     
