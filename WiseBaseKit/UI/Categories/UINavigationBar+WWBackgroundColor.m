@@ -8,6 +8,8 @@
 
 #import "UINavigationBar+WWBackgroundColor.h"
 #import <objc/runtime.h>
+#import "WWDeviceDefines.h"
+#import "UIColor+WWImage.h"
 
 @implementation UINavigationBar (WWBackgroundColor)
 

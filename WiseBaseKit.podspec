@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = 'WiseBaseKit'
-s.version = '1.1.0'
+s.version = '1.1.1'
 s.license = 'GPL-3.0'
 s.summary = 'iOS 封装的基础库，可使得开发项目更容易'
 s.homepage = 'https://github.com/diaoerlangdang/WiseBaseKit'
@@ -11,6 +11,6 @@ s.ios.deployment_target = '8.0'
 s.source_files = 'WiseBaseKit/**/*'
 s.resource = 'WiseBaseKit/resource/WiseKitResource.bundle'
 s.framework = 'Foundation', 'UIKit', 'AudioToolbox'
-s.dependency 'MJRefresh'
-s.dependency 'Masonry'
+s.dependency 'MJRefresh','~> 3.1'
+s.dependency 'Masonry','~>1.1'
 end
