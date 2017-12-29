@@ -9,6 +9,7 @@
 #import "WWBaseTableViewController.h"
 #import <Masonry/Masonry.h>
 #import <MJRefresh/MJRefresh.h>
+#import "WWDeviceDefines.h"
 
 @interface WWBaseTableViewController ()
 
