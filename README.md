@@ -41,4 +41,4 @@ end
 
 ## 使用的第三方库
 
-<p><a href="https://github.com/CoderMJLee/MJRefresh">MJRefresh</a> 和 <a href="https://github.com/CoderMJLee/MJRefresh">Masonry</a></p>
+<p><a href="https://github.com/CoderMJLee/MJRefresh">MJRefresh</a> 和 <a href="https://github.com/SnapKit/Masonry">Masonry</a></p>
