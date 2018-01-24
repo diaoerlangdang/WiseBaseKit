@@ -10,15 +10,31 @@
 
 @interface WWBaseWebViewController ()
 
+//取消长按
+@property (nonatomic, strong)WKUserScript *cancelLongPressUserScript;
+
 @end
 
 @implementation WWBaseWebViewController
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _isCancelLongPress = true;
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     //    self.navigationController.navigationBar.translucent = false;
+    
+    NSMutableString *javascript = [NSMutableString string];
+    [javascript appendString:@"document.documentElement.style.webkitTouchCallout='none';"];//禁止长按
+    [javascript appendString:@"document.documentElement.style.webkitUserSelect='none';"];//禁止选择
+    _cancelLongPressUserScript = [[WKUserScript alloc] initWithSource:javascript injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
     
     self.isNavBottom = true;
     
@@ -29,6 +45,10 @@
     [self.view addSubview:_webView];
     _webView.UIDelegate = self;
     _webView.navigationDelegate = self;
+    
+    if (_isCancelLongPress) {
+        [self.webView.configuration.userContentController addUserScript:_cancelLongPressUserScript];
+    }
     
     [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
         
@@ -51,6 +71,17 @@
     //inputValue 为字符串可直接传 “”； 多参数可传字典 “{title:'测试分享的标题',content:'测试分享的内容',url:'http://www.baidu.com'}”
  
 */
+}
+
+- (void)setIsCancelLongPress:(BOOL)isCancelLongPress
+{
+    _isCancelLongPress = isCancelLongPress;
+    
+    if (self.webView != nil && self.webView.configuration != nil) {
+        if (isCancelLongPress) {
+            [self.webView.configuration.userContentController addUserScript:_cancelLongPressUserScript];
+        }
+    }
 }
 
 /**
