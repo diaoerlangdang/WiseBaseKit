@@ -23,6 +23,8 @@
     if (self) {
         _isCancelLongPress = true;
     }
+    
+    return self;
 }
 
 - (void)viewDidLoad {
