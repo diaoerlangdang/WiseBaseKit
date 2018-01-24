@@ -19,6 +19,9 @@
 //web view 是否在nav 下面 默认 true
 @property(nonatomic, assign) BOOL isNavBottom;
 
+//是否取消长按，默认取消true
+@property(nonatomic, assign) BOOL isCancelLongPress;
+
 
 
 /**
