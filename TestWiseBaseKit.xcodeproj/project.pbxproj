@@ -19,6 +19,7 @@
 		E92E72B11F9D96CF00345A8D /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E72B01F9D96CF00345A8D /* MainPageViewController.m */; };
 		E92E72BC1F9D994800345A8D /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E72B91F9D994800345A8D /* WebViewController.m */; };
 		E92E72C31F9D9A0400345A8D /* NoDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E72C21F9D9A0400345A8D /* NoDataViewController.m */; };
+		E930D068204FC30200A4BEA0 /* UILabel+WWCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = E930D067204FC30200A4BEA0 /* UILabel+WWCreate.m */; };
 		E9355FC91FD4F7E700EC7278 /* WWTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9355FC81FD4F7E700EC7278 /* WWTableView.m */; };
 		E9355FCF1FD5279400EC7278 /* WWBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9355FCE1FD5279400EC7278 /* WWBaseWebViewController.m */; };
 		E935607C1FD6316A00EC7278 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E935607B1FD6315B00EC7278 /* AudioToolbox.framework */; };
@@ -85,6 +86,8 @@
 		E92E72B91F9D994800345A8D /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		E92E72C11F9D9A0400345A8D /* NoDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoDataViewController.h; sourceTree = "<group>"; };
 		E92E72C21F9D9A0400345A8D /* NoDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoDataViewController.m; sourceTree = "<group>"; };
+		E930D066204FC30200A4BEA0 /* UILabel+WWCreate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+WWCreate.h"; sourceTree = "<group>"; };
+		E930D067204FC30200A4BEA0 /* UILabel+WWCreate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+WWCreate.m"; sourceTree = "<group>"; };
 		E9355FC71FD4F7E700EC7278 /* WWTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWTableView.h; sourceTree = "<group>"; };
 		E9355FC81FD4F7E700EC7278 /* WWTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWTableView.m; sourceTree = "<group>"; };
 		E9355FCD1FD5279400EC7278 /* WWBaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWBaseWebViewController.h; sourceTree = "<group>"; };
@@ -535,6 +538,8 @@
 				E94076DA1F56C3CF00D38910 /* UIView+WWExtend.m */,
 				E93560981FD8CE5400EC7278 /* UINavigationBar+WWBackgroundColor.h */,
 				E93560991FD8CE5400EC7278 /* UINavigationBar+WWBackgroundColor.m */,
+				E930D066204FC30200A4BEA0 /* UILabel+WWCreate.h */,
+				E930D067204FC30200A4BEA0 /* UILabel+WWCreate.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -895,6 +900,7 @@
 				E92E72AE1F9D969D00345A8D /* FragmentController.m in Sources */,
 				E94076F31F56C3CF00D38910 /* WWRegexUtils.m in Sources */,
 				E9355FCF1FD5279400EC7278 /* WWBaseWebViewController.m in Sources */,
+				E930D068204FC30200A4BEA0 /* UILabel+WWCreate.m in Sources */,
 				E94076EE1F56C3CF00D38910 /* UIImage+WWScale.m in Sources */,
 				E95BD47D1F73B7E200E6BC5A /* WWBaseGuidViewController.m in Sources */,
 				E95A9B361F9DC90600BDCDCD /* CollectionViewCell.m in Sources */,
