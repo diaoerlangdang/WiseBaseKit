@@ -14,7 +14,10 @@
 #import "UIImage+WWColor.h"
 #import "UIImage+WWScale.h"
 #import "UIImage+WWVideo.h"
+#import "UILabel+WWCreate.h"
+#import "UIImage+WWStretch.h"
 #import "UINavigationBar+WWBackgroundColor.h"
+#import "UILabel+WWLineSpace.h"
 
 
 #endif /* _WWCategories_ */

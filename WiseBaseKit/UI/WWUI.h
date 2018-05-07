@@ -17,6 +17,8 @@
 #import "WWWebView.h"
 #import "WWSegmentView.h"
 #import "WWTableView.h"
+#import "WWTextField.h"
+#import "WWTextView.h"
 
 
 #endif /* WWUI_h */
