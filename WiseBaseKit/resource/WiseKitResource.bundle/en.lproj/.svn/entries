@@ -1,19 +1,15 @@
 10
 
 dir
-6867
-http://wurz@10.0.1.11/svn/MD-ORG/03%E9%A1%B9%E7%9B%AE/Working/%E4%BA%AE%E5%89%91%E5%86%B0%E5%9F%8E/IOS/02%E4%BB%A3%E7%A0%81/BCShop/BCShop/Lib/WiseBaseKit/resource/WiseKitResource.bundle/en.lproj
-http://wurz@10.0.1.11/svn/MD-ORG
+97
+http://wuruizhi@59.110.236.20:9999/svn/wu/tuling/OASystem/OASystem/Lib/WiseBaseKit/resource/WiseKitResource.bundle/en.lproj
+http://wuruizhi@59.110.236.20:9999/svn
 
 
 
-2017-12-04T09:23:15.935705Z
-5973
-wurz
-
-
-
-
+2018-05-01T12:41:31.593198Z
+56
+wuruizhi
 
 
 
@@ -24,7 +20,11 @@ wurz
 
 
 
-aae86b91-f3f2-3c4f-8c6b-9ed86fe3d299
+
+
+
+
+5d7c087b-a36b-4ffc-9086-0250dd6104a8
 
 Root.strings
 file
@@ -32,11 +32,11 @@ file
 
 
 
-2017-12-18T12:54:27.000000Z
+2018-04-29T13:41:26.000000Z
 6366f3414af5bd6ce6435a1f559e2c9b
-2017-12-04T09:23:15.935705Z
-5973
-wurz
+2018-05-01T12:41:31.593198Z
+56
+wuruizhi
 has-props
 
 
