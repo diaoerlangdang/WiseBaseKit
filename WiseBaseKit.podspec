@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = 'WiseBaseKit'
-s.version = '1.1.5'
+s.version = '1.2.0'
 s.license = 'GPL-3.0'
 s.summary = 'iOS 封装的基础库，可使得开发项目更容易'
 s.homepage = 'https://github.com/diaoerlangdang/WiseBaseKit'
