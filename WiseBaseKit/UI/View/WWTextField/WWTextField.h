@@ -13,4 +13,7 @@
 /** 限制最大长度 */
 @property(nonatomic, assign) NSUInteger maxLength;
 
+//placeholder 颜色
+@property (nonatomic, strong) UIColor *placeholderColor;
+
 @end

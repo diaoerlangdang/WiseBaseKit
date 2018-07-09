@@ -71,9 +71,9 @@
     _contentView = [UIView new];
     [_scrollView addSubview:_contentView];
     [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(_scrollView);
-        make.height.equalTo(_scrollView);
-        make.width.equalTo(_scrollView);
+        make.edges.equalTo(self.scrollView);
+        make.height.equalTo(self.scrollView);
+        make.width.equalTo(self.scrollView);
     }];
     
     //隐藏水平条

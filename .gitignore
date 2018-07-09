@@ -63,3 +63,7 @@ fastlane/test_output
 iOSInjectionProject/
 
 WiseBaseKit/UI/View/.DS_Store
+
+Podfile.lock
+
+Pods

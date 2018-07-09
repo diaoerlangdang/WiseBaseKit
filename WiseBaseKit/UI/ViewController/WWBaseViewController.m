@@ -193,8 +193,8 @@ static UIStatusBarStyle _defaultStatusBarStyle = UIStatusBarStyleDefault;
     _tipLabel.textColor = [UIColor lightGrayColor];
     [self.view addSubview:_tipLabel];
     [_tipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(_tipImageView.mas_centerX);
-        make.top.equalTo(_tipImageView.mas_bottom).offset(10);
+        make.centerX.equalTo(self.tipImageView.mas_centerX);
+        make.top.equalTo(self.tipImageView.mas_bottom).offset(10);
     }];
     
     [_tipLabel addTapAction:self selector:@selector(clickTipView)];

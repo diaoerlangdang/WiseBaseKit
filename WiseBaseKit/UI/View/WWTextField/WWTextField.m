@@ -10,6 +10,17 @@
 
 @implementation WWTextField
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        // 当UITextView的文字发生改变时，UITextView自己会发出一个UITextViewTextDidChangeNotification通知
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldEditChanged:) name:@"UITextFieldTextDidChangeNotification" object:self];
+    }
+    
+    return self;
+}
+
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -58,6 +69,18 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)setPlaceholderColor:(UIColor *)placeholderColor
+{
+    [self setValue:placeholderColor forKeyPath:@"_placeholderLabel.textColor"];
+}
+
+- (UIColor *)placeholderColor
+{
+    UIColor *color = [self valueForKeyPath:@"_placeholderLabel.textColor"];
+
+    return color;
 }
 
 @end

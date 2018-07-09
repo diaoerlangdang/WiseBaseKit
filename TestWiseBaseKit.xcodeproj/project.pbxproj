@@ -59,6 +59,8 @@
 		E96239281F9DD61D0042ED5E /* up@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9554D391F7CCC6700C75852 /* up@3x.png */; };
 		E96239291F9DD61D0042ED5E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E95BD47F1F73BB6200E6BC5A /* 1.png */; };
 		E962392A1F9DD61D0042ED5E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = E95BD4801F73BB6200E6BC5A /* 2.png */; };
+		E9915DE320F30916000EC01E /* WWTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9915DDE20F30916000EC01E /* WWTextView.m */; };
+		E9915DE420F30916000EC01E /* WWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E9915DE120F30916000EC01E /* WWTextField.m */; };
 		E9B932421F7E410600897B0D /* WWWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B932411F7E410600897B0D /* WWWebView.m */; };
 /* End PBXBuildFile section */
 
@@ -165,6 +167,10 @@
 		E95BD4A01F78AB8600E6BC5A /* WWUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWUI.h; sourceTree = "<group>"; };
 		E95BD4A11F78CC4200E6BC5A /* WWBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWBaseTableViewController.h; sourceTree = "<group>"; };
 		E95BD4A21F78CC4200E6BC5A /* WWBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWBaseTableViewController.m; sourceTree = "<group>"; };
+		E9915DDE20F30916000EC01E /* WWTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWTextView.m; sourceTree = "<group>"; };
+		E9915DDF20F30916000EC01E /* WWTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWTextView.h; sourceTree = "<group>"; };
+		E9915DE120F30916000EC01E /* WWTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWTextField.m; sourceTree = "<group>"; };
+		E9915DE220F30916000EC01E /* WWTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWTextField.h; sourceTree = "<group>"; };
 		E9B932401F7E410600897B0D /* WWWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWWebView.h; sourceTree = "<group>"; };
 		E9B932411F7E410600897B0D /* WWWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWWebView.m; sourceTree = "<group>"; };
 		F431A0D52978F9175A809E94 /* Pods-TestWiseBaseKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestWiseBaseKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestWiseBaseKit/Pods-TestWiseBaseKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -707,6 +713,8 @@
 		E95BD49C1F78AB5A00E6BC5A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E9915DE020F30916000EC01E /* WWTextField */,
+				E9915DDD20F30916000EC01E /* WWTextView */,
 				E9355FC61FD4F7D500EC7278 /* WWTableView */,
 				E9B9323F1F7E40A400897B0D /* WWWebView */,
 				E960F4B51F79ED0700D9B612 /* WWSegmentView */,
@@ -723,6 +731,24 @@
 				E91473B41FDA912200E6BFE9 /* WWSegmentViewCell.m */,
 			);
 			path = WWSegmentView;
+			sourceTree = "<group>";
+		};
+		E9915DDD20F30916000EC01E /* WWTextView */ = {
+			isa = PBXGroup;
+			children = (
+				E9915DDF20F30916000EC01E /* WWTextView.h */,
+				E9915DDE20F30916000EC01E /* WWTextView.m */,
+			);
+			path = WWTextView;
+			sourceTree = "<group>";
+		};
+		E9915DE020F30916000EC01E /* WWTextField */ = {
+			isa = PBXGroup;
+			children = (
+				E9915DE220F30916000EC01E /* WWTextField.h */,
+				E9915DE120F30916000EC01E /* WWTextField.m */,
+			);
+			path = WWTextField;
 			sourceTree = "<group>";
 		};
 		E9B9323F1F7E40A400897B0D /* WWWebView */ = {
@@ -745,7 +771,6 @@
 				E940762A1F5652B700D38910 /* Sources */,
 				E940762B1F5652B700D38910 /* Frameworks */,
 				E940762C1F5652B700D38910 /* Resources */,
-				2E6594B6831464CC223A8B1E /* [CP] Embed Pods Frameworks */,
 				17DEED5D7CD4F491A73763A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -763,7 +788,7 @@
 		E94076261F5652B700D38910 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = wuruizhi;
 				TargetAttributes = {
 					E940762D1F5652B700D38910 = {
@@ -818,28 +843,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TestWiseBaseKit/Pods-TestWiseBaseKit-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestWiseBaseKit/Pods-TestWiseBaseKit-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2E6594B6831464CC223A8B1E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestWiseBaseKit/Pods-TestWiseBaseKit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4F6EE5F5A099055AEB1AC621 /* [CP] Check Pods Manifest.lock */ = {
@@ -848,13 +861,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestWiseBaseKit-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -869,6 +885,7 @@
 				E95A9B241F9DB86200BDCDCD /* WWBaseCollectionViewController.m in Sources */,
 				E92E72931F9D8C9700345A8D /* GuidViewController.m in Sources */,
 				E94076EA1F56C3CF00D38910 /* IconButton.m in Sources */,
+				E9915DE320F30916000EC01E /* WWTextView.m in Sources */,
 				E92E72BC1F9D994800345A8D /* WebViewController.m in Sources */,
 				E95BD49B1F78A7C300E6BC5A /* WWBaseKitConfig.m in Sources */,
 				E95BD4A31F78CC4200E6BC5A /* WWBaseTableViewController.m in Sources */,
@@ -886,6 +903,7 @@
 				E94076EC1F56C3CF00D38910 /* UIColor+WWImage.m in Sources */,
 				E946CD6B1F6BDBA700F0452B /* WWNavigationController.m in Sources */,
 				E94076361F5652B700D38910 /* AppDelegate.m in Sources */,
+				E9915DE420F30916000EC01E /* WWTextField.m in Sources */,
 				E94076331F5652B700D38910 /* main.m in Sources */,
 				E92E72C31F9D9A0400345A8D /* NoDataViewController.m in Sources */,
 				E94076F11F56C3CF00D38910 /* WWCryptoUtils.m in Sources */,
@@ -944,6 +962,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -951,6 +970,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -998,6 +1018,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1005,6 +1026,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

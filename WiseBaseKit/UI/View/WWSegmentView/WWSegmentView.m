@@ -74,8 +74,8 @@
     _bottomLineView.backgroundColor = _selectTitleColor;
     [_bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(@2);
-        make.top.equalTo(_tableView.mas_top);
-        make.left.equalTo(_tableView.mas_left);
+        make.top.equalTo(self.tableView.mas_top);
+        make.left.equalTo(self.tableView.mas_left);
     }];
 }
 
@@ -181,19 +181,19 @@
         [cell.iconBtn layoutIfNeeded];
         
         [UIView animateWithDuration:0.3 animations:^{
-            [_bottomLineView mas_updateConstraints:^(MASConstraintMaker *make) {
-                if (_bottomLineType == WWSegmentViewBottomLineType_Defalut) {
-                    make.top.equalTo(_tableView.mas_top).offset(rectInTableView.origin.y+(rectInTableView.size.height - cell.iconBtn.width)/2);
+            [self.bottomLineView mas_updateConstraints:^(MASConstraintMaker *make) {
+                if (self.bottomLineType == WWSegmentViewBottomLineType_Defalut) {
+                    make.top.equalTo(self.tableView.mas_top).offset(rectInTableView.origin.y+(rectInTableView.size.height - cell.iconBtn.width)/2);
                     make.height.equalTo(@(cell.iconBtn.width));
                 }
                 else {
-                    make.top.equalTo(_tableView.mas_top).offset(rectInTableView.origin.y);
+                    make.top.equalTo(self.tableView.mas_top).offset(rectInTableView.origin.y);
                     make.height.equalTo(@(rectInTableView.size.height));
                 }
             }];
             
             //强制绘制
-            [_tableView layoutIfNeeded];
+            [self.tableView layoutIfNeeded];
         }];
     }
     else {
