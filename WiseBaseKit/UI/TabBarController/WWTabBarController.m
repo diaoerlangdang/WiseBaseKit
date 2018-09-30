@@ -50,7 +50,7 @@
  */
 -(void)playSound
 {
-    NSString *path = [NSString stringWithFormat:@"%@/like.caf",[[NSBundle bundleForClass:[WWBaseViewController class]] pathForResource:@"WiseKitResource" ofType:@"bundle"]];
+    NSString *path = [NSString stringWithFormat:@"%@/like.caf",[[NSBundle bundleForClass:[WWTabBarController class]] pathForResource:@"WiseKitResource" ofType:@"bundle"]];
     if (_soundPath != nil) {
         path = _soundPath;
     }
