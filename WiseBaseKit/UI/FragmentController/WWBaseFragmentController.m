@@ -108,6 +108,11 @@
     _scrollView.scrollEnabled = isHorizontalEnable;
 }
 
+- (void)setCurrentIndex:(NSInteger)currentIndex
+{
+    _currentIndex = currentIndex;
+}
+
 /**
  *  设置fragment的frame 绝对布局
  *
@@ -154,16 +159,16 @@
     [fragment.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(lastView ? lastView.mas_right : @0);
         make.top.equalTo(@0);
-        make.width.equalTo(_scrollView.mas_width);
-        make.height.equalTo(_scrollView.mas_height);
+        make.width.equalTo(self.scrollView.mas_width);
+        make.height.equalTo(self.scrollView.mas_height);
     }];
 
     lastView = fragment.view;
 
     [_contentView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(lastView.mas_right);
-        make.edges.equalTo(_scrollView);
-        make.height.equalTo(_scrollView);
+        make.edges.equalTo(self.scrollView);
+        make.height.equalTo(self.scrollView);
     }];
 
     [_scrollView layoutIfNeeded];
@@ -274,13 +279,13 @@
     if (animated) {
         
         [UIView animateWithDuration:0.5 animations:^{
-            [_scrollView setContentOffset:CGPointMake(_fragmentArray[newFragmentIndex].view.frame.origin.x, 0) animated:false];
+            [self.scrollView setContentOffset:CGPointMake(self.fragmentArray[newFragmentIndex].view.frame.origin.x, 0) animated:false];
         } completion:^(BOOL finished) {
             
             //改变index
-            _currentIndex = newFragmentIndex;
+            [self setCurrentIndex:newFragmentIndex];
             
-            _scrollEnable = true;
+            self.scrollEnable = true;
             if (completion != nil) {
                 completion();
             }
