@@ -205,7 +205,7 @@ static UIStatusBarStyle _defaultStatusBarStyle = UIStatusBarStyleDefault;
     
     if (self.navigationController != nil && self.navigationController.viewControllers.count > 1) {
         
-        NSString *backImageName = @"WiseKitResource.bundle/wise_base_kit_return";
+        NSString *backImageName = [NSString stringWithFormat:@"%@/wise_base_kit_return",[[NSBundle bundleForClass:[WWBaseViewController class]] pathForResource:@"WiseKitResource" ofType:@"bundle"]];
         if (_defaultReturnImageName != nil) {
             backImageName = _defaultReturnImageName;
         }
