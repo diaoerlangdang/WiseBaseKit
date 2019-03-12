@@ -9,6 +9,7 @@
 #import "FragmentController.h"
 #import "Fragment.h"
 #import "TableViewController.h"
+#import "WWDefine.h"
 
 @interface FragmentController ()<WWSegmentViewDelegate, WWFragmentControllerDelegate>
 

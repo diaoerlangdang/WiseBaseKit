@@ -7,6 +7,9 @@
 //
 
 #import "WWIconLabel.h"
+#import <Masonry/Masonry.h>
+#import "UILabel+WWCreate.h"
+#import "WWColorFontDefines.h"
 
 @interface WWIconLabel()
 

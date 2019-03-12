@@ -10,6 +10,7 @@
 #import <Masonry/Masonry.h>
 #import <MJRefresh/MJRefresh.h>
 #import "WWDeviceDefines.h"
+#import "WWDefine.h"
 
 @interface WWBaseCollectionViewController ()
 
