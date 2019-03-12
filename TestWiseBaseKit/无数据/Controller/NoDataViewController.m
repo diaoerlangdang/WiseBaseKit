@@ -47,14 +47,14 @@
     if (_alphaTmp < 1) {
         [self.navigationController.navigationBar ww_setBackgroundColor:[UIColor clearColor]];
     }
-    self.navigationController.navigationBar.shadowImage = [UIImage new];
+//    self.navigationController.navigationBar.shadowImage = [UIImage new];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     [self.navigationController.navigationBar ww_setBackgroundColor:WW_COLOR_HexRGB(0xee0000)];
-    self.navigationController.navigationBar.shadowImage = nil;
+//    self.navigationController.navigationBar.shadowImage = nil;
 }
 
 - (void)clickTipView

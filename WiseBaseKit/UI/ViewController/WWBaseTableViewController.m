@@ -109,11 +109,12 @@ static UIColor *_defaultTableViewBgColor = nil;
 {
     _showRefreshHeader = showRefreshHeader;
     
-    __weak typeof(self) wself = self;
+    @weakify(self)
     
     if (_showRefreshHeader) {
         _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-            [wself refreshingHeader];
+            @strongify(self)
+            [self refreshingHeader];
         }];
     }
     else {
@@ -125,11 +126,12 @@ static UIColor *_defaultTableViewBgColor = nil;
 {
     _showRefreshFooter = showRefreshFooter;
     
-    __weak typeof(self) wself = self;
+    @weakify(self)
     
     if (_showRefreshFooter) {
         _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-            [wself refreshingFooter];
+            @strongify(self)
+            [self refreshingFooter];
         }];
     }
     else {

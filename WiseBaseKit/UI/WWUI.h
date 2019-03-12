@@ -19,6 +19,7 @@
 #import "WWTableView.h"
 #import "WWTextField.h"
 #import "WWTextView.h"
+#import "WWIconLabel.h"
 
 
 #endif /* WWUI_h */

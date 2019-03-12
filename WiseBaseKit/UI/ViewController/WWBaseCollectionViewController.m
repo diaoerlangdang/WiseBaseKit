@@ -83,11 +83,12 @@ static UIColor *_defaultCollectionViewBgColor = nil;
 {
     _showRefreshHeader = showRefreshHeader;
     
-    __weak typeof(self) wself = self;
+    @weakify(self)
     
     if (_showRefreshHeader) {
         _collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-            [wself refreshingHeader];
+            @strongify(self)
+            [self refreshingHeader];
         }];
     }
     else {
@@ -99,11 +100,12 @@ static UIColor *_defaultCollectionViewBgColor = nil;
 {
     _showRefreshFooter = showRefreshFooter;
     
-    __weak typeof(self) wself = self;
+    @weakify(self)
     
     if (_showRefreshFooter) {
         _collectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-            [wself refreshingFooter];
+            @strongify(self)
+            [self refreshingFooter];
         }];
     }
     else {

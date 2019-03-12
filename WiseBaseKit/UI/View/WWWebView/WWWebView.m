@@ -105,11 +105,12 @@ static CGFloat const kProgressViewHeight = 2.0f;
 {
     _showRefreshHeader = showRefreshHeader;
     
-    __weak typeof(self) wself = self;
+    @weakify(self)
     
     if (_showRefreshHeader) {
         self.scrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-            [wself reload];
+            @strongify(self)
+            [self reload];
         }];
     }
     else {

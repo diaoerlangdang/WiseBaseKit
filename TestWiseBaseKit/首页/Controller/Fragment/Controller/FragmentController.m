@@ -30,7 +30,7 @@
     [_segmentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view.mas_left);
         make.right.equalTo(self.view.mas_right);
-        make.top.equalTo(self.view.mas_top).offset(WW_NAVIGATION_BAR_HEIGHT);
+        make.top.equalTo(self.view.mas_top);
         make.height.equalTo(@45.f);
     }];
     _segmentView.delegate = self;
@@ -51,12 +51,14 @@
     _segmentView.selectTitleColor = [UIColor redColor];
     _segmentView.iconPostion = WWSegmentViewIconPostion_Right;
     
-    __weak typeof(self) wSelf = self;
+    @weakify(self)
     [self setFragmentConstraints:^(MASConstraintMaker * _Nonnull make) {
-        make.top.equalTo(wSelf.segmentView.mas_bottom);
-        make.left.equalTo(wSelf.view.mas_left);
-        make.right.equalTo(wSelf.view.mas_right);
-        make.bottom.equalTo(wSelf.view);
+       
+       @strongify(self)
+        make.top.equalTo(self.segmentView.mas_bottom);
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+        make.bottom.equalTo(self.view);
     }];
     
     for (int i=0; i<dataArray.count; i++) {

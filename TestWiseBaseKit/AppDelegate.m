@@ -34,7 +34,11 @@
     
     [CSToastManager setDefaultPosition: CSToastPositionCenter];
     
-    [[UINavigationBar appearance] ww_setBackgroundColor:WW_COLOR_HexRGB(0xee0000)];
+    //解决ios10 部分情况下，丢失状态栏背景颜色问题
+    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+    statusBar.backgroundColor = WW_COLOR_HexRGB(0x649fea);
+    [UINavigationBar appearance].backgroundColor = WW_COLOR_HexRGB(0x649fea);
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:WW_COLOR_HexRGB(0x649fea)] forBarMetrics:UIBarMetricsDefault];
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
     NSDictionary *attr = @{NSFontAttributeName:[UIFont systemFontOfSize:18], NSForegroundColorAttributeName:[UIColor whiteColor]};
     [[UINavigationBar appearance] setTitleTextAttributes:attr];
