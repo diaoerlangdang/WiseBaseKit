@@ -35,6 +35,13 @@
     
     //自动计算cell高度
     self.tableView.estimatedRowHeight = 100;
+    
+    /*
+     下面的日志打印，在前边会有不同的前缀，可通过前缀在日志栏过滤显示
+     */
+    WWLogInfo(@"首页");
+    WWLogDebug(@"首页");
+    WWLogError(@"首页");
 }
 
 - (void)viewWillAppear:(BOOL)animated

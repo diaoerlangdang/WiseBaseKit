@@ -11,8 +11,15 @@
 #import "WWBaseKitConfig.h"
 
 
+#define WWLogError(fmt, ...) do { if([WWBaseKitConfig shareInstance].debug) NSLog((@"<Error:>  " fmt), ##__VA_ARGS__); }while(0);
+
+#define WWLogDebug(fmt, ...) do { if([WWBaseKitConfig shareInstance].debug) NSLog((@"<Debug:>  " fmt), ##__VA_ARGS__); }while(0);
+
+#define WWLogInfo(fmt, ...) do { if([WWBaseKitConfig shareInstance].debug) NSLog((@"<Info:>  " fmt), ##__VA_ARGS__); }while(0);
+
 #define WWLog(fmt, ...) do { if([WWBaseKitConfig shareInstance].debug) NSLog((fmt), ##__VA_ARGS__); }while(0);
-#define WWLogDetail(fmt, ...) do { if([WWBaseKitConfig shareInstance].debug) NSLog((@"<文件名:%s> " "<函数名:%s> " "<行号:%d>  " fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__) }while(0);
+
+#define WWLogDetail(fmt, ...) do { if([WWBaseKitConfig shareInstance].debug) NSLog((@"<文件名:%s> " "<函数名:%s> " "<行号:%d>  " fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__); }while(0);
 
 //打印json
 #define WWPrint_JSONString(args) WWLog(@"%@",[WWJSONUtils toJSONString:args])
