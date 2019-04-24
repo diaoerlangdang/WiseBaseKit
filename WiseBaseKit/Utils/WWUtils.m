@@ -10,7 +10,6 @@
 #import <UIKit/UIKit.h>
 #import <ifaddrs.h>
 #import <arpa/inet.h>
-#import "WWDeviceDefines.h"
 
 @implementation WWUtils
 
