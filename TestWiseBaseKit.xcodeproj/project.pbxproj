@@ -500,8 +500,6 @@
 				E94076C81F56C3CF00D38910 /* 3rd */,
 				E94076CF1F56C3CF00D38910 /* UI */,
 				E94076E01F56C3CF00D38910 /* Utils */,
-				E95BD4991F78A7C300E6BC5A /* WWBaseKitConfig.h */,
-				E95BD49A1F78A7C300E6BC5A /* WWBaseKitConfig.m */,
 			);
 			path = WiseBaseKit;
 			sourceTree = SOURCE_ROOT;
@@ -629,6 +627,8 @@
 				E946CD4D1F6A748000F0452B /* WWDeviceDefines.h */,
 				E946CD4E1F6A756500F0452B /* WWColorFontDefines.h */,
 				E95BD4951F78954100E6BC5A /* WWDefine.h */,
+				E95BD4991F78A7C300E6BC5A /* WWBaseKitConfig.h */,
+				E95BD49A1F78A7C300E6BC5A /* WWBaseKitConfig.m */,
 			);
 			path = define;
 			sourceTree = "<group>";
@@ -816,6 +816,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
