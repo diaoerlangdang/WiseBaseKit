@@ -34,9 +34,9 @@ typedef enum : NSUInteger {
 
 
 /**
- 返回按钮默认图片名称
+ 返回按钮默认图片
  */
-@property (class, nonatomic, strong) NSString *defaultReturnImageName;
+@property (class, nonatomic, strong) UIImage *defaultReturnImage;
 
 
 /**
@@ -48,7 +48,7 @@ typedef enum : NSUInteger {
 /**
  默认什么都没有显示的图片
  */
-@property (class, nonatomic, strong) NSString *defaultnoDataImageName;
+@property (class, nonatomic, strong) UIImage *defaultNoDataImage;
 
 
 /**
@@ -56,10 +56,11 @@ typedef enum : NSUInteger {
  */
 @property (class, nonatomic, strong) NSString *defaultnoDataTip;
 
+
 /**
  默认错误显示的图片
  */
-@property (class, nonatomic, strong) NSString *defaultErrorImageName;
+@property (class, nonatomic, strong) UIImage *defaultErrorImage;
 
 
 /**
@@ -67,10 +68,11 @@ typedef enum : NSUInteger {
  */
 @property (class, nonatomic, strong) NSString *defaultErrorTip;
 
+
 /**
  默认顶部图片
  */
-@property (class, nonatomic, strong) NSString *defaultTopImageName;
+@property (class, nonatomic, strong) UIImage *defaultTopImage;
 
 
 /**

@@ -21,18 +21,18 @@
 @implementation WWBaseViewController
 
 /**
- 返回按钮默认图片名称
+ 返回按钮默认图片
  */
-static NSString *_defaultReturnImageName = nil;
+static UIImage *_defaultReturnImage = nil;
 
-+ (NSString *)defaultReturnImageName
++ (UIImage *)defaultReturnImage
 {
-    return _defaultReturnImageName;
+    return _defaultReturnImage;
 }
 
-+ (void)setDefaultReturnImageName:(NSString *)defaultReturnImageName
++ (void)setDefaultReturnImage:(UIImage *)defaultReturnImage
 {
-    _defaultReturnImageName = defaultReturnImageName;
+    _defaultReturnImage = defaultReturnImage;
 }
 
 /**
@@ -53,16 +53,16 @@ static UIColor *_defaultBgColor = nil;
 /**
  默认什么都没有显示的图片
  */
-static NSString *_defaultnoDataImageName = @"";
+static UIImage *_defaultNoDataImage = nil;
 
-+ (NSString *)defaultnoDataImageName
++ (UIImage *)defaultNoDataImage
 {
-    return _defaultnoDataImageName;
+    return _defaultNoDataImage;
 }
 
-+ (void)setDefaultnoDataImageName:(NSString *)defaultnoDataImageName
++ (void)setDefaultNoDataImage:(UIImage *)defaultNoDataImage
 {
-    _defaultnoDataImageName = defaultnoDataImageName;
+    _defaultNoDataImage = defaultNoDataImage;
 }
 
 /**
@@ -83,16 +83,16 @@ static NSString *_defaultnoDataTip = @"";
 /**
  默认错误显示的图片
  */
-static NSString *_defaultErroImageName = nil;
+static UIImage *_defaultErrorImage = nil;
 
-+ (NSString *)defaultErrorImageName
++ (UIImage *)defaultErrorImage
 {
-    return _defaultErroImageName;
+    return _defaultErrorImage;
 }
 
-+ (void)setDefaultErrorImageName:(NSString *)defaultErrorImageName
++ (void)setDefaultErrorImage:(UIImage *)defaultErrorImage
 {
-    _defaultErroImageName = defaultErrorImageName;
+    _defaultErrorImage = defaultErrorImage;
 }
 
 /**
@@ -113,16 +113,16 @@ static NSString *_defaultErrorTip = @"";
 /**
  默认顶部图片
  */
-static NSString *_defaultTopImageName = nil;
+static UIImage *_defaultTopImage = nil;
 
-+ (NSString *)defaultTopImageName
++ (UIImage *)defaultTopImage
 {
-    return _defaultReturnImageName;
+    return _defaultTopImage;
 }
 
-+ (void)setDefaultTopImageName:(NSString *)defaultTopImageName
++ (void)setDefaultTopImage:(UIImage *)defaultTopImage
 {
-    _defaultTopImageName = defaultTopImageName;
+    _defaultTopImage = defaultTopImage;
 }
 
 /**
@@ -173,8 +173,8 @@ static UIStatusBarStyle _defaultStatusBarStyle = UIStatusBarStyleDefault;
     if (_topImageName != nil) {
         _topImageView.image = [UIImage imageNamed:_topImageName];
     }
-    else if (_defaultTopImageName != nil) {
-        _topImageView.image = [UIImage imageNamed:_defaultTopImageName];
+    else if (_defaultTopImage != nil) {
+        _topImageView.image = _defaultTopImage;
     }
     
     _tipImageView = [UIImageView new];
@@ -206,10 +206,10 @@ static UIStatusBarStyle _defaultStatusBarStyle = UIStatusBarStyleDefault;
     if (self.navigationController != nil && self.navigationController.viewControllers.count > 1) {
         
         NSString *backImageName = [NSString stringWithFormat:@"%@/wise_base_kit_return",[[NSBundle bundleForClass:[WWBaseViewController class]] pathForResource:@"WiseKitResource" ofType:@"bundle"]];
-        if (_defaultReturnImageName != nil) {
-            backImageName = _defaultReturnImageName;
-        }
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:backImageName] style:UIBarButtonItemStylePlain target:self action:@selector(leftButtonMethod)];
+        
+        UIImage *leftImage = (_defaultReturnImage != nil) ? _defaultReturnImage : [UIImage imageNamed:backImageName];
+        
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:leftImage style:UIBarButtonItemStylePlain target:self action:@selector(leftButtonMethod)];
     }
     
     if (_defaultBgColor != nil) {
@@ -286,7 +286,7 @@ static UIStatusBarStyle _defaultStatusBarStyle = UIStatusBarStyleDefault;
                 _tipImageView.image = [UIImage imageNamed:_noDataImageName];
             }
             else {
-                _tipImageView.image = [UIImage imageNamed:_defaultnoDataImageName];
+                _tipImageView.image = _defaultNoDataImage;
             }
             
             break;
@@ -306,7 +306,7 @@ static UIStatusBarStyle _defaultStatusBarStyle = UIStatusBarStyleDefault;
                 _tipImageView.image = [UIImage imageNamed:_errorImageName];
             }
             else {
-                _tipImageView.image = [UIImage imageNamed:_defaultErroImageName];
+                _tipImageView.image = _defaultErrorImage;
             }
             break;
             
