@@ -66,8 +66,11 @@ typedef enum : NSUInteger {
 /** 选中的位置 默认0，不得大于titleArray.cout */
 @property(nonatomic, assign) NSInteger selectIndex;
 
-/** 是否显示底部线 默认为true 底部线的颜色与selectTitleColor相同 */
+/** 是否显示底部线 默认为true  */
 @property(nonatomic, assign) BOOL showBottomLineView;
+
+/** 底部线的颜色 默认0x77A9FD*/
+@property(nonatomic, strong) UIColor *bottomLineColor;
 
 /** 底部线 默认为WWSegmentViewBottomLineType_Defalut */
 @property(nonatomic, assign) WWSegmentViewBottomLineType bottomLineType;

@@ -71,7 +71,7 @@
     
     _bottomLineView = [[UIView alloc] init];
     [_tableView addSubview:_bottomLineView];
-    _bottomLineView.backgroundColor = _selectTitleColor;
+    _bottomLineView.backgroundColor = _bottomLineColor;
     [_bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(@2);
         make.top.equalTo(self.tableView.mas_top);
@@ -99,12 +99,19 @@
     _bottomLineType = WWSegmentViewBottomLineType_Defalut;
     
     _selectTitleColor = WW_COLOR_HexRGB(0x77A9FD);
+    
+    _bottomLineColor = WW_COLOR_HexRGB(0x77A9FD);
 }
 
 - (void)setSelectTitleColor:(UIColor *)selectTitleColor
 {
     _selectTitleColor = selectTitleColor;
-    _bottomLineView.backgroundColor = selectTitleColor;
+}
+
+- (void)setBottomLineColor:(UIColor *)bottomLineColor
+{
+    _bottomLineColor = bottomLineColor;
+    _bottomLineView.backgroundColor = bottomLineColor;
 }
 
 - (void)setSelectIndex:(NSInteger)selectIndex
