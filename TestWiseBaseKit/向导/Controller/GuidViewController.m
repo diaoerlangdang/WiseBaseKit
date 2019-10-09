@@ -69,6 +69,8 @@
     WWTabBarController *tabC = [[WWTabBarController alloc] init];
     tabC.viewControllers = @[nav1, nav2];
     
+    tabC.modalPresentationStyle = UIModalPresentationFullScreen;
+    
     [self presentViewController:tabC animated:true completion:nil];
 }
 

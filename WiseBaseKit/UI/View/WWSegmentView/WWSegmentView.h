@@ -39,6 +39,9 @@ typedef enum : NSUInteger {
 /** 标题宽 默认为-1 负数表示自适应宽度 */
 @property(nonatomic, assign) CGFloat titleWidth;
 
+/** 自适应标题宽外的内边距， 默认为30  */
+@property(nonatomic, assign) CGFloat titlePaddingWidth;
+
 /** 标题字体 */
 @property(nonatomic, strong) UIFont *titleFont;
 

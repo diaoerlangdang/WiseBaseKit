@@ -84,6 +84,8 @@
 {
     _titleWidth = -1.f;
     
+    _titlePaddingWidth = 30.f;
+    
     _titleFont = WW_Font(16);
     
     _selectTitleFont = WW_Font(16);
@@ -254,7 +256,7 @@
         
         [iconBtn sizeToFit];
         
-        return iconBtn.width+30;
+        return iconBtn.width+_titlePaddingWidth;
     }
     else {
         return _titleWidth;

@@ -36,6 +36,7 @@
     }];
     _segmentView.delegate = self;
     _segmentView.selectTitleFont = [UIFont systemFontOfSize:20];
+    _segmentView.titlePaddingWidth = 30;
     _segmentView.titleIcon = [UIImage imageNamed:@"up"];
     
     NSMutableArray<NSString *> *dataArray = [NSMutableArray array];
