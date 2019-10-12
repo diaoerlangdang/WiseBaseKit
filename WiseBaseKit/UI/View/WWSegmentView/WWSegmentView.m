@@ -57,6 +57,7 @@
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.showsVerticalScrollIndicator = false;
     _tableView.showsHorizontalScrollIndicator = false;
+    _tableView.backgroundColor = [UIColor clearColor];
     
     if (@available(iOS 11.0, *)) {
         //设置为0，禁止自动计算cell高度
