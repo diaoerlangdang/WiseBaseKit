@@ -14,6 +14,7 @@
 #import "WWNavigationController.h"
 #import "WWTabBarController.h"
 #import "WWBaseFragmentController.h"
+#import "WWBaseScrollViewController.h"
 #import "WWWebView.h"
 #import "WWSegmentView.h"
 #import "WWTableView.h"

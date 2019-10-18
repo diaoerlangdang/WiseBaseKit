@@ -60,6 +60,7 @@
 		E96239281F9DD61D0042ED5E /* up@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9554D391F7CCC6700C75852 /* up@3x.png */; };
 		E96239291F9DD61D0042ED5E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E95BD47F1F73BB6200E6BC5A /* 1.png */; };
 		E962392A1F9DD61D0042ED5E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = E95BD4801F73BB6200E6BC5A /* 2.png */; };
+		E9710B7323595B4E00361A77 /* WWBaseScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9710B7223595B4E00361A77 /* WWBaseScrollViewController.m */; };
 		E9915DE320F30916000EC01E /* WWTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9915DDE20F30916000EC01E /* WWTextView.m */; };
 		E9915DE420F30916000EC01E /* WWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E9915DE120F30916000EC01E /* WWTextField.m */; };
 		E9B932421F7E410600897B0D /* WWWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B932411F7E410600897B0D /* WWWebView.m */; };
@@ -170,6 +171,8 @@
 		E95BD4A01F78AB8600E6BC5A /* WWUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWUI.h; sourceTree = "<group>"; };
 		E95BD4A11F78CC4200E6BC5A /* WWBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWBaseTableViewController.h; sourceTree = "<group>"; };
 		E95BD4A21F78CC4200E6BC5A /* WWBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWBaseTableViewController.m; sourceTree = "<group>"; };
+		E9710B7123595B4E00361A77 /* WWBaseScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWBaseScrollViewController.h; sourceTree = "<group>"; };
+		E9710B7223595B4E00361A77 /* WWBaseScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWBaseScrollViewController.m; sourceTree = "<group>"; };
 		E9915DDE20F30916000EC01E /* WWTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWTextView.m; sourceTree = "<group>"; };
 		E9915DDF20F30916000EC01E /* WWTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWTextView.h; sourceTree = "<group>"; };
 		E9915DE120F30916000EC01E /* WWTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWTextField.m; sourceTree = "<group>"; };
@@ -524,6 +527,7 @@
 		E94076CF1F56C3CF00D38910 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E9710B7023595B0C00361A77 /* ScrollViewController */,
 				E932E335223788A7007652C2 /* WWIconLabel */,
 				E95BD49C1F78AB5A00E6BC5A /* View */,
 				E95BD47A1F73B7A100E6BC5A /* GuidViewController */,
@@ -746,6 +750,15 @@
 			path = WWSegmentView;
 			sourceTree = "<group>";
 		};
+		E9710B7023595B0C00361A77 /* ScrollViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E9710B7123595B4E00361A77 /* WWBaseScrollViewController.h */,
+				E9710B7223595B4E00361A77 /* WWBaseScrollViewController.m */,
+			);
+			path = ScrollViewController;
+			sourceTree = "<group>";
+		};
 		E9915DDD20F30916000EC01E /* WWTextView */ = {
 			isa = PBXGroup;
 			children = (
@@ -897,6 +910,7 @@
 				E92E72AD1F9D969D00345A8D /* Fragment.m in Sources */,
 				E95A9B241F9DB86200BDCDCD /* WWBaseCollectionViewController.m in Sources */,
 				E92E72931F9D8C9700345A8D /* GuidViewController.m in Sources */,
+				E9710B7323595B4E00361A77 /* WWBaseScrollViewController.m in Sources */,
 				E94076EA1F56C3CF00D38910 /* IconButton.m in Sources */,
 				E9915DE320F30916000EC01E /* WWTextView.m in Sources */,
 				E92E72BC1F9D994800345A8D /* WebViewController.m in Sources */,
