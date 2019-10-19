@@ -8,6 +8,8 @@
 
 #import "WWBaseScrollViewController.h"
 #import <MJRefresh/MJRefresh.h>
+#import "WWDeviceDefines.h"
+#import "WWDefine.h"
 
 @interface WWBaseScrollViewController ()
 
