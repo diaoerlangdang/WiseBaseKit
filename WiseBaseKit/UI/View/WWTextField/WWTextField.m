@@ -73,14 +73,41 @@
 
 - (void)setPlaceholderColor:(UIColor *)placeholderColor
 {
-    [self setValue:placeholderColor forKeyPath:@"_placeholderLabel.textColor"];
+    _placeholderColor = placeholderColor;
+    
+    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:self.placeholder];
+    [attr addAttribute:NSForegroundColorAttributeName value:placeholderColor range:NSMakeRange(0, self.placeholder.length)];
+    
+    self.attributedPlaceholder = attr;
 }
 
-- (UIColor *)placeholderColor
+- (void)setPlaceholderFont:(UIFont *)placeholderFont
 {
-    UIColor *color = [self valueForKeyPath:@"_placeholderLabel.textColor"];
-
-    return color;
+    _placeholderFont = placeholderFont;
+    
+    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:self.placeholder];
+    [attr addAttribute:NSFontAttributeName
+                     value:placeholderFont
+                     range:NSMakeRange(0, self.placeholder.length)];
+    self.attributedPlaceholder = attr;
 }
+
+/// 设置placeHolder 信息， 若颜色与字体都需要更改建议使用该方法
+/// @param placeHolder placeHolder信息
+/// @param color placeHolder 颜色
+/// @param font placeHolder 字体
+- (void)setPlaceHolder:(NSString *)placeHolder color:(UIColor *)color font:(UIFont *)font
+{
+    _placeholderColor = color;
+    _placeholderFont = font;
+    
+    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:placeHolder];
+    [attr addAttribute:NSFontAttributeName
+                     value:font
+                     range:NSMakeRange(0, placeHolder.length)];
+    [attr addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0, placeHolder.length)];
+    self.attributedPlaceholder = attr;
+}
+
 
 @end
