@@ -36,7 +36,7 @@
  *
  *  @return 布局
  */
-- (UICollectionViewFlowLayout *)collectionViewFlowLayout;
+- (UICollectionViewLayout *)collectionViewLayout;
 
 /**
  *  开始下拉刷新

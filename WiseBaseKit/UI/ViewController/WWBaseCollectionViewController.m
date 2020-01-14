@@ -47,7 +47,7 @@ static UIColor *_defaultCollectionViewBgColor = nil;
 /** 初始化CollectionView */
 - (void)initCollectionView
 {
-    UICollectionViewFlowLayout *flowLayout = [self collectionViewFlowLayout];
+    UICollectionViewLayout *flowLayout = [self collectionViewLayout];
     if (flowLayout == nil) {
         flowLayout = [[UICollectionViewFlowLayout alloc] init];
     }
@@ -131,7 +131,7 @@ static UIColor *_defaultCollectionViewBgColor = nil;
  *
  *  @return 布局
  */
-- (UICollectionViewFlowLayout *)collectionViewFlowLayout
+- (UICollectionViewLayout *)collectionViewLayout
 {
     return nil;
 }
