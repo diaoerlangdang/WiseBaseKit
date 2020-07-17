@@ -39,6 +39,11 @@
     _segmentView.titlePaddingWidth = 30;
     _segmentView.titleIcon = [UIImage imageNamed:@"up"];
     
+    // 自定义宽度
+    _segmentView.bottomLineType = WWSegmentViewBottomLineType_Custom;
+    _segmentView.bottomLineCustomWidth = 15;
+    _segmentView.bottomLineHeight = 5;
+    
     NSMutableArray<NSString *> *dataArray = [NSMutableArray array];
     for (int i=0; i<20; i++) {
         [dataArray addObject:[NSString stringWithFormat:@"title%d",i+1]];

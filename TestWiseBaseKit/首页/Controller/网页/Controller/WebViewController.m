@@ -98,5 +98,10 @@
 //    decisionHandler(WKNavigationActionPolicyAllow);
 //}
 
+- (BOOL)isSlideReturn
+{
+    return true;
+}
+
 
 @end

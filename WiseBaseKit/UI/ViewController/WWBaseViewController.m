@@ -140,6 +140,20 @@ static UIStatusBarStyle _defaultStatusBarStyle = UIStatusBarStyleDefault;
     _defaultStatusBarStyle = defaultStatusBarStyle;
 }
 
+/**
+ 默认是否支持滑动返回
+ */
+static BOOL _defaultSlideReturn = true;
+
++ (BOOL)defaultSlideReturn
+{
+    return _defaultSlideReturn;
+}
+
++ (void)setDefaultSlideReturn:(BOOL)defaultSlideReturn
+{
+    _defaultSlideReturn = defaultSlideReturn;
+}
 
 - (instancetype)init
 {
@@ -216,6 +230,19 @@ static UIStatusBarStyle _defaultStatusBarStyle = UIStatusBarStyleDefault;
         self.view.backgroundColor = _defaultBgColor;
     }
     
+    // 全局和本页面都支持滑动返回
+    if (WWBaseViewController.defaultSlideReturn && [self isSlideReturn]) {
+        /* 添加滑动返回**/
+        id target = self.navigationController.interactivePopGestureRecognizer.delegate;
+        // handleNavigationTransition:为系统私有API,即系统自带侧滑手势的回调方法，我们在自己的手势上直接用它的回调方法
+        UIScreenEdgePanGestureRecognizer *panGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:target action:@selector(handleNavigationTransition:)];
+        panGesture.edges = UIRectEdgeLeft; //从左侧滑动
+        panGesture.delegate = self; // 设置手势代理，拦截手势触发
+        [self.view addGestureRecognizer:panGesture];
+        
+        // 一定要禁止系统自带的滑动手势
+        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -235,6 +262,19 @@ static UIStatusBarStyle _defaultStatusBarStyle = UIStatusBarStyleDefault;
     [super viewWillDisappear:animated];
     
     [[self.navigationController.navigationBar subviews] objectAtIndex:0].alpha = _oldNavAlpha;
+}
+
+// 什么时候调用，每次触发手势之前都会询问下代理方法，是否触发
+// 作用：拦截手势触发
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    // 当当前控制器是根控制器时，不可以侧滑返回，所以不能使其触发手势
+    if(self.navigationController.childViewControllers.count == 1)
+    {
+        return NO;
+    }
+    
+    return YES;
 }
 
 /**
@@ -345,6 +385,14 @@ static UIStatusBarStyle _defaultStatusBarStyle = UIStatusBarStyleDefault;
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return _defaultStatusBarStyle;
+}
+
+/**
+* 是否支持侧边滑动
+*/
+- (BOOL)isSlideReturn
+{
+    return true;
 }
 
 @end

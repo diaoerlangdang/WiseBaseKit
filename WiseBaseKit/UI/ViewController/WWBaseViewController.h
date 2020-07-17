@@ -30,7 +30,7 @@ typedef enum : NSUInteger {
 
 @end
 
-@interface WWBaseViewController : UIViewController<WWViewControllerDelegate>
+@interface WWBaseViewController : UIViewController<WWViewControllerDelegate, UIGestureRecognizerDelegate>
 
 
 /**
@@ -81,6 +81,11 @@ typedef enum : NSUInteger {
 @property (class, nonatomic, assign) UIStatusBarStyle defaultStatusBarStyle;
 
 /**
+ 默认是否支持滑动返回，默认支持
+ */
+@property (class, nonatomic, assign) BOOL defaultSlideReturn;
+
+/**
  * 当没有数据或错误时显示提示图，默认隐藏
  */
 @property (nonatomic, strong) UIImageView *tipImageView;
@@ -128,5 +133,10 @@ typedef enum : NSUInteger {
  * 点击提示图，继承该函数实现点击操作
  */
 - (void)clickTipView;
+
+/**
+* 是否支持侧边滑动，默认true
+*/
+- (BOOL)isSlideReturn;
 
 @end

@@ -74,7 +74,7 @@
     [_tableView addSubview:_bottomLineView];
     _bottomLineView.backgroundColor = _bottomLineColor;
     [_bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(@2);
+        make.width.equalTo(@(self.bottomLineHeight));
         make.top.equalTo(self.tableView.mas_top);
         make.left.equalTo(self.tableView.mas_left);
     }];
@@ -104,6 +104,10 @@
     _selectTitleColor = WW_COLOR_HexRGB(0x77A9FD);
     
     _bottomLineColor = WW_COLOR_HexRGB(0x77A9FD);
+    
+    _bottomLineHeight = 2;
+    
+    _bottomLineCustomWidth = 10;
 }
 
 - (void)setSelectTitleColor:(UIColor *)selectTitleColor
@@ -115,6 +119,17 @@
 {
     _bottomLineColor = bottomLineColor;
     _bottomLineView.backgroundColor = bottomLineColor;
+}
+
+- (void)setBottomLineHeight:(CGFloat)bottomLineHeight
+{
+    _bottomLineHeight = bottomLineHeight;
+    
+    [_bottomLineView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(@(self.bottomLineHeight));
+        make.top.equalTo(self.tableView.mas_top);
+        make.left.equalTo(self.tableView.mas_left);
+    }];
 }
 
 - (void)setSelectIndex:(NSInteger)selectIndex
@@ -196,9 +211,13 @@
                     make.top.equalTo(self.tableView.mas_top).offset(rectInTableView.origin.y+(rectInTableView.size.height - cell.iconBtn.width)/2);
                     make.height.equalTo(@(cell.iconBtn.width));
                 }
-                else {
+                else if (self.bottomLineType == WWSegmentViewBottomLineType_Full) {
                     make.top.equalTo(self.tableView.mas_top).offset(rectInTableView.origin.y);
                     make.height.equalTo(@(rectInTableView.size.height));
+                }
+                else {
+                    make.top.equalTo(self.tableView.mas_top).offset(rectInTableView.origin.y+(rectInTableView.size.height - self.bottomLineCustomWidth)/2);
+                    make.height.equalTo(@(self.bottomLineCustomWidth));
                 }
             }];
             

@@ -595,17 +595,17 @@
 		E94076DF1F56C3CF00D38910 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E946CD451F6A704500F0452B /* WWViewController.h */,
 				E946CD461F6A707B00F0452B /* UIViewController+WWFragment.h */,
 				E946CD471F6A707B00F0452B /* UIViewController+WWFragment.m */,
-				E946CD491F6A715D00F0452B /* WWBaseViewController.h */,
-				E946CD4A1F6A715D00F0452B /* WWBaseViewController.m */,
-				E95BD4A11F78CC4200E6BC5A /* WWBaseTableViewController.h */,
-				E95BD4A21F78CC4200E6BC5A /* WWBaseTableViewController.m */,
 				E95A9B221F9DB86200BDCDCD /* WWBaseCollectionViewController.h */,
 				E95A9B231F9DB86200BDCDCD /* WWBaseCollectionViewController.m */,
+				E95BD4A11F78CC4200E6BC5A /* WWBaseTableViewController.h */,
+				E95BD4A21F78CC4200E6BC5A /* WWBaseTableViewController.m */,
+				E946CD491F6A715D00F0452B /* WWBaseViewController.h */,
+				E946CD4A1F6A715D00F0452B /* WWBaseViewController.m */,
 				E9355FCD1FD5279400EC7278 /* WWBaseWebViewController.h */,
 				E9355FCE1FD5279400EC7278 /* WWBaseWebViewController.m */,
+				E946CD451F6A704500F0452B /* WWViewController.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -819,7 +819,7 @@
 				TargetAttributes = {
 					E940762D1F5652B700D38910 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = QXDWTS96HB;
+						DevelopmentTeam = HGKNXNFB8W;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1089,7 +1089,7 @@
 			baseConfigurationReference = 0E31180AB1770FF74A547984 /* Pods-TestWiseBaseKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QXDWTS96HB;
+				DEVELOPMENT_TEAM = HGKNXNFB8W;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TestWiseBaseKit/WWPrefixHeader.pch";
 				INFOPLIST_FILE = TestWiseBaseKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1104,7 +1104,7 @@
 			baseConfigurationReference = F431A0D52978F9175A809E94 /* Pods-TestWiseBaseKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QXDWTS96HB;
+				DEVELOPMENT_TEAM = HGKNXNFB8W;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TestWiseBaseKit/WWPrefixHeader.pch";
 				INFOPLIST_FILE = TestWiseBaseKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -17,6 +17,7 @@ typedef enum : NSUInteger {
 typedef enum : NSUInteger {
     WWSegmentViewBottomLineType_Defalut, //默认值，底部线与内容同宽
     WWSegmentViewBottomLineType_Full,//底部线充满整个分区
+    WWSegmentViewBottomLineType_Custom,//底部线自定义宽度
 } WWSegmentViewBottomLineType;
 
 @class WWSegmentView;
@@ -77,6 +78,14 @@ typedef enum : NSUInteger {
 
 /** 底部线 默认为WWSegmentViewBottomLineType_Defalut */
 @property(nonatomic, assign) WWSegmentViewBottomLineType bottomLineType;
+
+/** 底部线的自定义宽度 默认10, 只有在bottomLineType ==WWSegmentViewBottomLineType_Custom时有效*/
+@property(nonatomic, assign) CGFloat bottomLineCustomWidth;
+
+/** 底部线的高度 默认2*/
+@property(nonatomic, assign) CGFloat bottomLineHeight;
+
+
 
 /** 代理 */
 @property(nonatomic, weak) id<WWSegmentViewDelegate> delegate;
