@@ -51,11 +51,11 @@
  */
 - (void)textDidChange:(NSNotification *)obj
 {
-    if (self.text.length > 0) {
-        self.scrollEnabled = YES;
-    }else{
-        self.scrollEnabled = NO;
-    }
+//    if (self.text.length > 0) {
+//        self.scrollEnabled = YES;
+//    }else{
+//        self.scrollEnabled = NO;
+//    }
     
     // 重绘（重新调用）
     [self setNeedsDisplay];
